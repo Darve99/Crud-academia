@@ -1,0 +1,55 @@
+-- sample-data2.dump
+-- Datos alternativos de prueba para CRUD Academia
+-- Formato SQL ejecutable en PostgreSQL
+
+BEGIN;
+
+TRUNCATE TABLE notas RESTART IDENTITY CASCADE;
+TRUNCATE TABLE alumnos RESTART IDENTITY CASCADE;
+TRUNCATE TABLE materias RESTART IDENTITY CASCADE;
+
+INSERT INTO alumnos (nombre, apellido, email, fecha_nacimiento) VALUES
+('Mariana', 'Salazar', 'mariana.salazar@demo.com', '2002-04-08'),
+('Tomas', 'Pineda', 'tomas.pineda@demo.com', '2001-09-15'),
+('Laura', 'Quintero', 'laura.quintero@demo.com', '2003-01-19'),
+('Samuel', 'Arias', 'samuel.arias@demo.com', '2000-06-02'),
+('Paula', 'Naranjo', 'paula.naranjo@demo.com', '2002-12-27'),
+('David', 'Ortega', 'david.ortega@demo.com', '2001-03-13'),
+('Natalia', 'Barrera', 'natalia.barrera@demo.com', '2003-08-11'),
+('Felipe', 'Soto', 'felipe.soto@demo.com', '2000-11-24');
+
+INSERT INTO materias (nombre, codigo, creditos) VALUES
+('Calculo Diferencial', 'MAT102', 4),
+('Programacion II', 'PRG201', 5),
+('Sistemas Operativos', 'SO301', 4),
+('Ingenieria de Software', 'IS302', 4),
+('Analitica de Datos', 'AD250', 3),
+('Seguridad Informatica', 'SEG330', 3);
+
+INSERT INTO notas (valor, fecha_registro, alumno_id, materia_id) VALUES
+(4.4, NOW(), 1, 1),
+(4.7, NOW(), 1, 2),
+(4.3, NOW(), 1, 5),
+(3.9, NOW(), 2, 1),
+(4.1, NOW(), 2, 3),
+(4.0, NOW(), 2, 6),
+(4.8, NOW(), 3, 2),
+(4.6, NOW(), 3, 4),
+(4.5, NOW(), 3, 5),
+(3.7, NOW(), 4, 1),
+(3.9, NOW(), 4, 3),
+(4.2, NOW(), 4, 4),
+(4.5, NOW(), 5, 2),
+(4.3, NOW(), 5, 4),
+(4.1, NOW(), 5, 6),
+(3.8, NOW(), 6, 1),
+(4.0, NOW(), 6, 2),
+(4.2, NOW(), 6, 5),
+(4.7, NOW(), 7, 3),
+(4.6, NOW(), 7, 4),
+(4.4, NOW(), 7, 6),
+(4.1, NOW(), 8, 1),
+(4.3, NOW(), 8, 2),
+(4.0, NOW(), 8, 5);
+
+COMMIT;

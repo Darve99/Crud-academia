@@ -1,0 +1,31 @@
+{
+  "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-17",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "C:\\Program Files\\Java\\jdk-17",
+      "default": true
+    }
+  ],
+  "java.import.maven.enabled": true,
+  "java.import.gradle.enabled": false,
+  "java.project.sourcePaths": [
+    "src/main/java",
+    "src/test/java"
+  ],
+  "java.project.outputPath": "target/classes",
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "maven.executable.path": "C:\\Users\\darve\\tools\\apache-maven-3.9.11\\bin\\mvn.cmd",
+  "maven.terminal.useJavaHome": true,
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "JAVA_HOME",
+      "value": "C:\\Program Files\\Java\\jdk-17"
+    },
+    {
+      "environmentVariable": "MAVEN_HOME",
+      "value": "C:\\Users\\darve\\tools\\apache-maven-3.9.11"
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "automatic"
+}
