@@ -44,7 +44,7 @@ Copia .env.example a .env y ajusta valores:
 - DB_DRIVER: driver JDBC
 - DB_URI: URI para ejecucion local fuera de Docker
 
-## Ejecucion con Docker (maximo 10 comandos)
+## Ejecucion con Docker 
 
 1. Copy-Item .env.example .env
 2. docker compose up -d --build
@@ -52,7 +52,7 @@ Copia .env.example a .env y ajusta valores:
 4. docker compose logs -f api
 5. docker compose down
 
-## Ejecucion local (sin contenedor API)
+## Ejecucion local 
 
 1. docker compose up -d db
 2. Configurar variables de entorno segun .env
